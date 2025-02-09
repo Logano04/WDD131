@@ -9,6 +9,10 @@
     --secondary-font: 'Mooli', sans-serif;
     }
 
+.hide {
+    display: none;
+}
+
 body {
   font-family: var(--primary-font);
   font-size: 1.2em;
@@ -16,11 +20,21 @@ body {
 
 a:link,
 a:visited {
-  color: var(--accent-color);
+  color: var(--text-light);
 }
 
 button {
+    all:unset;
     font-family: var(--secondary-font)
+}
+
+ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+}
+li {
+    display: inline;
 }
 
 header {
@@ -28,6 +42,9 @@ header {
     background-color: var(--primary-color);
     color: white;
     padding-bottom: 10px;
+    a {
+        display: block;
+    }
 }
 footer {
     background-color: var(--primary-color);
@@ -46,17 +63,34 @@ img {
     height: 250px;
     width: 250px;
     object-fit: cover;
+    border:black 1px solid;
+    padding: 3px;
+    box-shadow: #333 2px 2px 5px;
 }
 
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     grid-gap: 1rem;
 }
 
+/* @media screen and (max-width: 700px) {
+    nav {
+        display: none;
+    }
+} */
 @media screen and (min-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
     button {
         display: none;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
