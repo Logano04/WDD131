@@ -9,6 +9,11 @@
     --primary-font: 'Fredoka', sans-serif;
 }
 
+main {
+    display:grid;
+    grid-template-columns: 1fr 1fr; 
+}
+
 h1 {
     color: var(--primary-color);
     font-family: var(--header-font);

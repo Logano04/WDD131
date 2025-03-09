@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="recipes.css">
+    <link rel="favicon" href="images/favicon.ico">
+    <script src="main.js" type="module" defer></script>
+    <script src="recipes.mjs" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/recipe-book.png" alt="Recipe Book logo">
+        <h1>RecipeBook</h1>
+    </header>
+    <main>
+        <div class="searchBar">
+            <input type="text" placeholder="Find a recipe">
+            <button>Search</button>
+        </div>
+        <section class="recipe">
+            <img id="recipe-image" src="" alt="Recipe Image">
+            <div name="recipe-info">
+                <h1 id="recipe-name"></h1>
+                <span
+	                class="rating"
+	                role="img"
+	                aria-label="Rating: 4 out of 5 stars"
+                >
+	            <span aria-hidden="true" class="icon-star">⭐</span>
+	            <span aria-hidden="true" class="icon-star">⭐</span>
+	            <span aria-hidden="true" class="icon-star">⭐</span>
+	            <span aria-hidden="true" class="icon-star-empty">⭐</span>
+	            <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+                <p id="recipe-author"></p>
+                <p id="recipe-description"></p>
+            </div>
+    </main>
+    <footer>
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a> 
+        <p>&copy; 2020 Recipes</p>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+    </footer>
+</body>
+</html>
