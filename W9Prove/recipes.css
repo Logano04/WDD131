@@ -41,21 +41,31 @@ body {
 .recipe {
     height: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: top;
     padding: 30px;
     margin: 20px;
     border: 1px solid black;
-    border-radius: 8px; 
+    border-radius: 8px;
+    font-size: .8em;
 }
 
 .recipe h1 {
     font-family: 'Amatic SC', cursive;
-    color: var(--secondary-color)
+    color: var(--secondary-color);
+    font-size: 1.8em;
 }
 
 .recipe img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    padding-right: 20px;
+}
+
+#tags-container {
+    display: flex;
+    flex-direction: row;
+    color: var(--primary-color);
 }
 
 div [name="recipe-info"] {
@@ -78,7 +88,7 @@ footer {
 @media screen and (max-width: 600px) {
     .recipe {
         flex-direction: column;
-        height: 400px;
+        height: 350px;
     }
     .recipe img {
         object-fit: cover;
