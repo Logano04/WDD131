@@ -40,23 +40,24 @@ const articles = [
 ]
 
 const mainContent = document.querySelector('#main-content')
+let bookContainer = document.getElementById('book-container')
 
 function renderArticles(article) {
 	return `<div class="book">
-                <section>
-                <div>${article.date}</div>
-                <div>${article.ages}</div>
-                <div>${article.genre}</div>
-                <div>${article.stars}</div>
+                <section class="book-meta">
+                <div id="date">${article.date}</div>
+                <div id="age-range">${article.ages}</div>
+                <div id="genre">${article.genre}</div>
+                <div id="rating">${article.stars}</div>
                 </section>
-                <section>
-                    <h2>${article.title}</h2>
-                    <img src="${article.imgSrc}" alt="${article.imgAlt}">
-                    <p>${article.description}</p>
+                <section class="book-info">
+                    <h2 id="title">${article.title}</h2>
+                    <img id="image" src="${article.imgSrc}" alt="${article.imgAlt}">
+                    <p id="description">${article.description}</p>
                 </section>
             </div>`
 }
 
-mainContent.innerHTML = articles.map(renderArticles).join('') //make string
-
-articles.map(renderArticles)
+bookContainer.innerHTML += renderArticles(articles[0]);
+bookContainer.innerHTML += renderArticles(articles[1]);
+bookContainer.innerHTML += renderArticles(articles[2]);

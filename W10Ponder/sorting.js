@@ -67,28 +67,37 @@ const hikes = [
   ];
    const simpleList = ["oranges", "grapes", "lemons", "apples", "Bananas", "watermelons", "coconuts", "broccoli", "mango"];
 
+
 let simpleSort = simpleList.sort();
 console.log(simpleSort);
 
+hikes.sort((a, b) => {
+  const aDistance = a.distance.replace(" miles", "");
+  const bDistance = b.distance.replace(" miles", "");
+  return aDistance - bDistance;
+});
+
+/* reverse order sort*/
+function compareFn(a, b) {
+    if (a < b) {
+      return 1;
+    } else if (a > b) {
+      return -1;
+    }
+    return 0;
+  }
+console.log("comparefn: " + simpleList.sort(compareFn));
+
 function searchList2(list, query) {
-    function searchCallBack(item) {
+    function searchCallBack(string) {
         return (
-            item.name.toLowerCase().includes(query.toLowerCase()) ||
-            item.description.toLowerCase().includes(query.toLowerCase()) ||
-            item.tags.find((tag) => tag.toLowerCase().includes(query.toLowerCase()))
+            string.name.toLowerCase().includes(query.toLowerCase()) ||
+            string.description.toLowerCase().includes(query.toLowerCase()) ||
+            string.tags.find((tag) => tag.toLowerCase().includes(query.toLowerCase()))
         );
     }
     return list.filter(searchCallBack);
 }
 
-hikes.sort((a, b) => a.distance > b.distance ? 1 : -1);
-
-hikes.sort((a, b) => {
-    const aDistance = a.distance.replace(" miles", "");
-    const bDistance = b.distance.replace(" miles", "");
-    return aDistance - bDistance;
-    alert (aDistance)
-})
-
-let filteredList = searchList2(hikes, "ew");
+let filteredList = searchList2(hikes, "al");
 console.log(filteredList);

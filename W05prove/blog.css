@@ -9,16 +9,60 @@
     --primary-font: 'Fredoka', sans-serif;
 }
 
-main {
-    display:grid;
-    grid-template-columns: 1fr 1fr; 
-}
-
 h1 {
     color: var(--primary-color);
     font-family: var(--header-font);
     text-align: center;
     font-size: 3em;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+
+}
+
+/*container for both book items*/
+.book {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-content: stretch;
+}
+
+/*article that book items are appended to*/
+#book-container{
+    display: flex;
+    flex: column;
+    flex-wrap: wrap;
+}
+
+.book-meta {
+    padding-top: 30px;
+    width: 25%;
+}
+
+.book-info {
+    padding: 10px;
+    width: 75%;
+}
+
+.book-info img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.filter-section {
+    font-family: var(--primary-font);
+    color: black;
+    border: 2px solid black;
+    align-self: flex-start;
+    width: 100%;
+    padding: 10px;
+    padding-top: 20px;
+    margin: 10px;
 }
 
 .skiptocontent {
@@ -39,17 +83,9 @@ nav {
 
 nav ul {
     max-width: 90%;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: end;
-    justify-content: end;
-    font-size: 1.25em;
-}
-
-.book {
     display: flex;
-    align-items: stretch;
+    justify-content: space-between;
+    list-style-type: none;
 }
 
 section {
@@ -58,5 +94,4 @@ section {
     border: 2px solid var(--border-color);
     padding: 10px;
     margin: 10px;
-    display:inline-block;
 }
