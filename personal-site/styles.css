@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Underdog&display=swap');
+
+:root {
+    --primary-color: #4D7EA8;
+    --secondary-color: #B6C2D9;
+    --text-color: #272932;
+}
+
+#logo {
+    background-color: white;
+    color: var(--text-color);
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+#logo img {
+    max-height: 100px;
+    margin-right: 10px;
+}
+
+body {
+    font-family: 'Underdog', cursive;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+#home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
+    padding-top: 40px;
+}
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border : 2px solid var(--text-color);
+}
+#game-container img{
+    width: 450px;
+    object-fit: contain;
+}
+
+#content {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+}
+
+#grid-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    background-color: yellowgreen;
+}
+
+.grid-item {
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    position: relative;
+    cursor: pointer;
+}
+
+.sheep {
+    background: url('images/sheep.png') no-repeat center center;
+    background-size: contain;
+  }
